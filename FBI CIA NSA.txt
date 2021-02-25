@@ -1,0 +1,33 @@
+ int C;
+            string B;
+            Console.WriteLine("In put code : ");
+            C = int.Parse(Console.ReadLine());
+            Console.WriteLine("In put branch : ");
+            B = Console.ReadLine();
+            if (B == "CIA")
+            {
+                bool check1 = (C - 3) % 10 == 0 || (C - 6) % 10 == 0 || (C - 9) % 10 == 0;
+                bool check2 = check1 && (C % 100) / 10 != 1 && (C % 100) / 10 != 3 && (C % 100) / 10 != 5;
+                bool check3 = check2 && (C % 10000) / 1000 >= 6 && (C % 10000) / 1000 != 8;
+                Console.WriteLine(check3);
+
+            }
+            else if (B == "FBI")
+            {
+                bool check1 = (C % 1000000) / 100000 >= 4 && (C % 1000000) / 100000 <= 7;
+                bool check2 = check1 && (C % 1000) / 100 == 2 || (C % 1000) / 100 == 4 || (C % 1000) / 100 == 6 || (C % 1000) / 100 == 8 && (C % 1000) / 100 != 6;
+                bool check3 = check2 && (C % 100000) / 10000 == 1 || (C % 100000) / 10000 == 3 || (C % 100000) / 10000 == 5 || (C % 100000) / 10000 == 7 || (C % 100000) / 10000 == 9;
+                Console.WriteLine(check3);
+
+            }
+            else if (B == "NSA")
+            {
+                bool check1 = 30 % (C % 10) == 10;
+                bool check2 = check1 && (C % 10000) % 3 == 0 && (C % 10000) % 2 != 0;
+                bool check3 = check2 && (C % 10) == 7 || (C % 100) == 7 || (C % 1000) == 7 || (C % 10000) == 7 || (C % 100000) == 7 || (C % 1000000) == 7 || (C % 10000000) == 7;
+                Console.WriteLine(check3);
+            }
+            else Console.WriteLine("false");
+                
+            
+            Console.ReadLine();
