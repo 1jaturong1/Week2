@@ -1,0 +1,44 @@
+string A;
+double X, Y,P,T;
+A = (Console.ReadLine());
+X = double.Parse(Console.ReadLine());
+Y = double.Parse(Console.ReadLine());
+
+            if (A == "time" || A == "price")
+            {
+                if (X > 0)
+                {
+                    if (A == "time")
+                    {
+                        P = Math.Pow(X - 1, 2);
+                        Console.WriteLine(X);
+                        Console.WriteLine(P);
+                    }
+                    if (A == "price")
+                    {
+                        
+                        if (X < 1 && Y < 1)
+                        {
+                            T = 1 - Math.Sqrt(Y);
+                            Console.WriteLine(T);
+                            Console.WriteLine(Y);
+                        }
+                        else 
+                        {
+                            T = 1 + Math.Sqrt(Y);
+                            Console.WriteLine(T);
+                            Console.WriteLine(Y);
+                        }
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("Invalid mouse position");
+                }
+            }
+            else 
+            {
+                Console.WriteLine("Invalid mode");
+            }
+ Console.ReadLine();
